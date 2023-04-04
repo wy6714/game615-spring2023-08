@@ -4,6 +4,8 @@
 
 by Yifei Wang
 
+[Play](https://wy6714.github.io/game615-spring2023-08/exercise08/play/)  |  [Source](https://github.com/wy6714/game615-spring2023-08/tree/main)
+
 ### Credit:
 
 Alien Flower by Meli M [CC-BY] via Poly Pizza
