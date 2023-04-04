@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public unitScript selectedUnit;
+    //public unitScript us;
+    //public unitScript us;
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +21,18 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
             if (Physics.Raycast(ray) == false)
             {
                 if (selectedUnit != null)
                 {
                     selectedUnit.selected = false;
                     selectedUnit = null;
+                    selectedUnit.TargetButton.SetActive(true);
                 }
             }
         }
 
     }
+
 }

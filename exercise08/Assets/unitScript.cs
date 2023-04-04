@@ -11,42 +11,87 @@ public class unitScript : MonoBehaviour
     public GameObject TargetButton;
 
     public GameManager gm;
+    public Animator sunanim;
+    public Animator wateranim;
     void Start()
     {
+        GameObject gmObj = GameObject.Find("GameManager");
+        gm = gmObj.GetComponent<GameManager>();
         GameObject TargetButton = GameObject.Find(unitName);
-        TargetButton.setActive(false);
+        TargetButton.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-    private void OnMouseEnter()
-    {
-        if (selected == false)
+        if (selected == true)
         {
             TargetButton.SetActive(true);
         }
-    }
-    private void OnMouseExit()
-    {
-        if (selected == false)
+        else
         {
             TargetButton.SetActive(false);
         }
 
+
+
+
     }
+    // private void OnMouseEnter()
+    // {
+    //     if (selected == false)
+    //     {
+    //         TargetButton.SetActive(true);
+    //     }
+    // }
+    // private void OnMouseExit()
+    // {
+    //     if (selected == false)
+    //     {
+    //         TargetButton.SetActive(false);
+    //     }
+
+    // }
 
     private void OnMouseDown()
     {
         if (gm.selectedUnit != null)
         {
             gm.selectedUnit.selected = false;
-            gm.selectedUnit = null;
+
             TargetButton.SetActive(false);
         }
         selected = true;
+        TargetButton.SetActive(true);
 
+        if (gm.selectedUnit == null)
+        {
+            TargetButton.SetActive(false);
+        }
+
+        gm.selectedUnit = this;
+        //---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+    }
+    public void giveSun()
+    {
+        //play give sun animation
+        sunanim.SetTrigger("giveSun");
+    }
+
+    public void giveWater()
+    {
+        //play give water animation
+        wateranim.SetTrigger("giveWater");
     }
 }
