@@ -796,6 +796,8 @@ MonoBehaviour:
   unitName: WaterButton
   selected: 0
   TargetButton: {fileID: 225835112}
+  SunButton: {fileID: 1887271852}
+  WaterButton: {fileID: 225835112}
   gm: {fileID: 1991896106}
   sunanim: {fileID: 1299285026}
   wateranim: {fileID: 1191924092}
@@ -909,6 +911,8 @@ MonoBehaviour:
   unitName: SunButton
   selected: 0
   TargetButton: {fileID: 1887271852}
+  SunButton: {fileID: 1887271852}
+  WaterButton: {fileID: 225835112}
   gm: {fileID: 1991896106}
   sunanim: {fileID: 1299285026}
   wateranim: {fileID: 1191924092}

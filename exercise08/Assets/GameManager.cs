@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
                 {
                     selectedUnit.selected = false;
                     selectedUnit = null;
-                    selectedUnit.TargetButton.SetActive(true);
+                    selectedUnit.TargetButton.SetActive(false);
                 }
             }
         }

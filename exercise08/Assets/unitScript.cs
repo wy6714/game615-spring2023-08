@@ -9,6 +9,8 @@ public class unitScript : MonoBehaviour
     public string unitName;
     public bool selected = false;
     public GameObject TargetButton;
+    public GameObject SunButton;
+    public GameObject WaterButton;
 
     public GameManager gm;
     public Animator sunanim;
@@ -19,19 +21,24 @@ public class unitScript : MonoBehaviour
         gm = gmObj.GetComponent<GameManager>();
         GameObject TargetButton = GameObject.Find(unitName);
         TargetButton.SetActive(false);
+
+        GameObject SunButton = GameObject.Find("SunButton");
+        SunButton.SetActive(false);
+        GameObject WaterButton = GameObject.Find("WaterButton");
+        WaterButton.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (selected == true)
-        {
-            TargetButton.SetActive(true);
-        }
-        else
-        {
-            TargetButton.SetActive(false);
-        }
+        // if (selected == true)
+        // {
+        //     TargetButton.SetActive(true);
+        // }
+        // else
+        // {
+        //     TargetButton.SetActive(false);
+        // }
 
 
 
@@ -55,18 +62,21 @@ public class unitScript : MonoBehaviour
 
     private void OnMouseDown()
     {
+
         if (gm.selectedUnit != null)
         {
             gm.selectedUnit.selected = false;
 
-            TargetButton.SetActive(false);
+            SunButton.SetActive(false);
+            WaterButton.SetActive(false);
         }
         selected = true;
         TargetButton.SetActive(true);
 
         if (gm.selectedUnit == null)
         {
-            TargetButton.SetActive(false);
+            SunButton.SetActive(false);
+            WaterButton.SetActive(false);
         }
 
         gm.selectedUnit = this;
