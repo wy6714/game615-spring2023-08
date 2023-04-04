@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public unitScript selectedUnit;
-    //public unitScript us;
-    //public unitScript us;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +27,10 @@ public class GameManager : MonoBehaviour
                 {
                     selectedUnit.selected = false;
                     selectedUnit = null;
-                    selectedUnit.TargetButton.SetActive(false);
+                    selectedUnit.SunButton.SetActive(false);
+                    selectedUnit.WaterButton.SetActive(false);
                 }
+
             }
         }
 

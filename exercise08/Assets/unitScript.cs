@@ -31,16 +31,10 @@ public class unitScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (selected == true)
-        // {
-        //     TargetButton.SetActive(true);
-        // }
-        // else
-        // {
-        //     TargetButton.SetActive(false);
-        // }
-
-
+        if (selected == true)
+        {
+            TargetButton.SetActive(true);
+        }
 
 
     }
@@ -80,16 +74,6 @@ public class unitScript : MonoBehaviour
         }
 
         gm.selectedUnit = this;
-        //---------------------------------------------------
-
-
-
-
-
-
-
-
-
 
 
     }
